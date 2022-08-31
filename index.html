@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            word-wrap: break-word;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .invoice {
+            padding: 50px 80px;
+        }
+
+        .head {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .head .logo {
+            width: 55px;
+        }
+
+        .head .logo img {
+            width: 100%;
+        }
+
+        .details {
+            display: flex;
+            gap: 40px;
+        }
+
+        .details .left,
+        .details .right {
+            width: 30%;
+        }
+
+        .detail-sec {
+            margin-bottom: 25px;
+        }
+
+        .details h3 {
+            margin-bottom: 15px;
+        }
+
+        .details p {
+            margin-bottom: 10px;
+        }
+
+        .table {
+            margin: 40px 0 30px;
+        }
+
+        .table table {
+            width: 100%;
+
+        }
+
+        .table table th,
+        td {
+            text-align: left;
+            border: 1px solid #e2e2e2;
+            margin-bottom: 10px;
+            padding: 6px;
+            border-spacing: 0;
+        }
+
+        .product-details {
+            width: 45%;
+            margin-bottom: 40px;
+        }
+
+        .product-detail {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+        }
+
+        .product-detail p:nth-child(1) {
+            font-weight: 600;
+            width: 38%;
+        }
+
+        .product-detail p:nth-child(2) {
+            width: 60%;
+        }
+
+        .amount {
+            width: 40%;
+            margin-left: auto;
+        }
+
+        .amount .flex {
+            display: flex;
+            justify-content: space-between;
+
+            padding: 15px 0;
+        }
+
+        .subtotal,
+        .total {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .total,
+        .paid {
+            font-weight: 600;
+        }
+
+        .balance {
+            border-radius: 5px;
+            overflow: hidden;
+            font-weight: 600;
+        }
+
+        .balance .balance-head {
+            background-color: #E9AF99;
+            text-align: center;
+            color: #fff;
+            padding: 13px 5px;
+
+        }
+
+        .balance .balance-price {
+            padding: 13px;
+            text-align: right;
+
+            border: 2px solid #E9AF99;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice">
+        <div class="head">
+            <h1>Invoice</h1>
+            <div class="logo"><img src="logo2.png" alt=""></div>
+        </div>
+
+        <div class="details">
+            <div class="left">
+                <div class="detail-sec from">
+                    <h3>From</h4>
+                        <p>Packaging Mines</p>
+                        <p>14111 Vance Jackson Rd
+                            San Antonio, , TX , 78249
+                            United States
+                        </p>
+                </div>
+                <div class="detail-sec to">
+                    <h3>To</h3>
+                    <p>Staci Gingery</p>
+                    <p>6336 Camino Largo
+                        San Diego , CA, 92120
+                        United States
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="detail-sec inv-no">
+                    <h3>Invoice No.</h3>
+                    <p>INV-3215</p>
+                </div>
+                <div class="detail-sec date">
+                    <h3>Date</h3>
+                    <p>Aug 04 2022</p>
+                </div>
+                <div class="detail-sec inv-due">
+                    <h3>Invoice Due</h3>
+                    <p>Aug 04 2022</p>
+                </div>
+            </div>
+        </div>
+        <div class="table">
+            <table>
+                <tr style="border-bottom: 2px solid #777;">
+                    <th style="width: 40%;">Description</th>
+                    <th style="width: 20%; text-align: right;">Quantity</th>
+                    <th style="width: 20%; text-align: right;">Rate</th>
+                    <th style="width: 20%; text-align: right;">Amount</th>
+                </tr>
+                <tr>
+                    <td>1). Product Name: Custom Printed Drawer boxes </td>
+                    <td style="width: 20%; text-align: right;">1</td>
+                    <td style="width: 20%; text-align: right;">450.00</td>
+                    <td style="width: 20%; text-align: right;">USD 450.00</td>
+                </tr>
+            </table>
+        </div>
+        <div class="product-details">
+            <div class="product-detail">
+                <p>Size</p>
+                <p>4 x 4 x 1.5in</p>
+            </div>
+            <div class="product-detail">
+                <p>Stock</p>
+                <p>16pt = 300 GSM White cardboard</p>
+            </div>
+            <div class="product-detail">
+                <p>Printing</p>
+                <p>PMS 627C</p>
+            </div>
+            <div class="product-detail">
+                <p>Lamination</p>
+                <p>Matte</p>
+            </div>
+            <div class="product-detail">
+                <p>Final Delivery</p>
+                <p>Pre-scored & pre-glued (Flat)</p>
+            </div>
+            <div class="product-detail">
+                <p>addons</p>
+                <p>Golden Foil</p>
+            </div>
+        </div>
+        <div class="amount">
+            <div class="flex subtotal">
+                <p>Subtotal</p>
+                <p>450.00</p>
+            </div>
+            <div class="total flex">
+                <p>Total</p>
+                <p>USD 450.00</p>
+            </div>
+            <div class="paid flex">
+                <p>Paid to Date</p>
+                <p>USD 450.00</p>
+            </div>
+            <div class="balance">
+                <div class="balance-head">
+                    <p>Balance</p>
+                </div>
+                <div class="balance-price">
+                    <p>USD 0.00</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
