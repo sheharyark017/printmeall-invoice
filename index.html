@@ -19,21 +19,22 @@
         }
 
         .invoice {
-            padding: 50px 80px;
+            padding: 50px 5px;
         }
 
         .head {
             display: flex;
             margin-bottom: 30px;
             align-items: center;
-            justify-content: space-between;
+
         }
 
-        .head .logo {
+        .logo {
             width: 55px;
+            margin-left: auto;
         }
 
-        .head .logo img {
+        .logo-img {
             width: 100%;
         }
 
@@ -42,8 +43,8 @@
             gap: 40px;
         }
 
-        .details .left,
-        .details .right {
+        .details-left,
+        .details-right {
             width: 30%;
         }
 
@@ -51,8 +52,10 @@
             margin-bottom: 25px;
         }
 
-        .details h3 {
+        .top-head {
             margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 17px;
         }
 
         .details p {
@@ -63,7 +66,7 @@
             margin: 40px 0 30px;
         }
 
-        .table table {
+        table {
             width: 100%;
 
         }
@@ -84,17 +87,18 @@
 
         .product-detail {
             display: flex;
-            justify-content: space-between;
+
             padding: 6px 0;
         }
 
-        .product-detail p:nth-child(1) {
+        .bold {
             font-weight: 600;
             width: 38%;
         }
 
-        .product-detail p:nth-child(2) {
+        .normal {
             width: 60%;
+            margin-left: auto;
         }
 
         .amount {
@@ -102,10 +106,8 @@
             margin-left: auto;
         }
 
-        .amount .flex {
+        .flex {
             display: flex;
-            justify-content: space-between;
-
             padding: 15px 0;
         }
 
@@ -136,7 +138,6 @@
         .balance .balance-price {
             padding: 13px;
             text-align: right;
-
             border: 2px solid #E9AF99;
         }
     </style>
@@ -146,21 +147,21 @@
     <div class="invoice">
         <div class="head">
             <h1>Invoice</h1>
-            <div class="logo"><img src="logo2.png" alt=""></div>
+            <div class="logo"><img class="logo-img" src="logo2.png" alt=""></div>
         </div>
 
         <div class="details">
-            <div class="left">
+            <div class="details-left">
                 <div class="detail-sec from">
-                    <h3>From</h4>
-                        <p>Packaging Mines</p>
-                        <p>14111 Vance Jackson Rd
-                            San Antonio, , TX , 78249
-                            United States
-                        </p>
+                    <p class="top-head">From</p>
+                    <p>Packaging Mines</p>
+                    <p>14111 Vance Jackson Rd
+                        San Antonio, , TX , 78249
+                        United States
+                    </p>
                 </div>
                 <div class="detail-sec to">
-                    <h3>To</h3>
+                    <p class="top-head">To</p>
                     <p>Staci Gingery</p>
                     <p>6336 Camino Largo
                         San Diego , CA, 92120
@@ -168,17 +169,17 @@
                     </p>
                 </div>
             </div>
-            <div class="right">
+            <div class="details-right">
                 <div class="detail-sec inv-no">
-                    <h3>Invoice No.</h3>
+                    <p class="top-head">Invoice No.</p>
                     <p>INV-3215</p>
                 </div>
                 <div class="detail-sec date">
-                    <h3>Date</h3>
+                    <p class="top-head">Date</p>
                     <p>Aug 04 2022</p>
                 </div>
                 <div class="detail-sec inv-due">
-                    <h3>Invoice Due</h3>
+                    <p class="top-head">Invoice Due</p>
                     <p>Aug 04 2022</p>
                 </div>
             </div>
@@ -201,42 +202,42 @@
         </div>
         <div class="product-details">
             <div class="product-detail">
-                <p>Size</p>
-                <p>4 x 4 x 1.5in</p>
+                <p class="bold">Size</p>
+                <p class="normal">4 x 4 x 1.5in</p>
             </div>
             <div class="product-detail">
-                <p>Stock</p>
-                <p>16pt = 300 GSM White cardboard</p>
+                <p class="bold">Stock</p>
+                <p class="normal">16pt = 300 GSM White cardboard</p>
             </div>
             <div class="product-detail">
-                <p>Printing</p>
-                <p>PMS 627C</p>
+                <p class="bold">Printing</p>
+                <p class="normal">PMS 627C</p>
             </div>
             <div class="product-detail">
-                <p>Lamination</p>
-                <p>Matte</p>
+                <p class="bold">Lamination</p>
+                <p class="normal">Matte</p>
             </div>
             <div class="product-detail">
-                <p>Final Delivery</p>
-                <p>Pre-scored & pre-glued (Flat)</p>
+                <p class="bold">Final Delivery</p>
+                <p class="normal">Pre-scored & pre-glued (Flat)</p>
             </div>
             <div class="product-detail">
-                <p>addons</p>
-                <p>Golden Foil</p>
+                <p class="bold">addons</p>
+                <p class="normal">Golden Foil</p>
             </div>
         </div>
         <div class="amount">
             <div class="flex subtotal">
                 <p>Subtotal</p>
-                <p>450.00</p>
+                <p style="margin-left: auto;">450.00</p>
             </div>
             <div class="total flex">
                 <p>Total</p>
-                <p>USD 450.00</p>
+                <p style="margin-left: auto;">USD 450.00</p>
             </div>
             <div class="paid flex">
                 <p>Paid to Date</p>
-                <p>USD 450.00</p>
+                <p style="margin-left: auto;">USD 450.00</p>
             </div>
             <div class="balance">
                 <div class="balance-head">
